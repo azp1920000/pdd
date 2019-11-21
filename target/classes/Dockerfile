@@ -1,0 +1,5 @@
+FROM harbor.66123123.com/library/java:181_13
+VOLUME /tmp
+ARG JAR_NAME
+ADD ${JAR_NAME} app.jar
+EXPOSE 8019

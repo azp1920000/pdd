@@ -1,0 +1,27 @@
+package com.leading.noticeservice.domain.noticetest.dtotest;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+
+import java.util.Date;
+
+/**
+ * Created by lenovo on 2019/11/20.
+ */
+@Data
+@ApiModel(value = "NoticePushListDTO", description = "首页公告信息")
+public class NoticePushListDTOtest {
+    @ApiModelProperty("编号")
+    private Long id;
+    @ApiModelProperty("公告详情id")
+    private Long pushId;
+    @ApiModelProperty("标题")
+    private String title;
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    @ApiModelProperty("推送时间")
+    private Date createTime;
+    @ApiModelProperty("是否已读")
+    private Integer read;
+}

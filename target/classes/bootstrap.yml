@@ -1,0 +1,25 @@
+server:
+  port: 8019
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:password@172.18.0.235:8761/eureka/
+spring:
+  application:
+    name: notice-service
+  cloud:
+    config:
+      profile: dev
+      label: feature-initialization
+      discovery:
+        enabled: true
+        serviceId: configuration-server
+leading:
+  zuul:
+    # leading zuul网关host
+    host: 172.18.0.235
+
+logging:
+  level:
+    com.leading: debug
